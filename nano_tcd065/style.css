@@ -849,7 +849,7 @@ ul {
 /* 追加 .global_change --------------*/
 .global_change {
   /* eureka 211104 [仕様変更]#0007 アクセス、お問い合わせボタン追加に伴うヘッダー配置調整 */
-  padding-left: 7px; 
+  padding-left: 7px;
   /* margin-bottom: 4px; */
 }
 
@@ -2467,6 +2467,9 @@ ul {
   border: 1px solid #ddd;
   padding: 22px 22px 35px;
 }
+.item-insight {
+  padding: 22px;
+}
 
 .p-article01__img {
   overflow: hidden;
@@ -2480,10 +2483,17 @@ ul {
   min-height: 50px;
   transition: color 0.2s ease;
 }
+.item-insight__title {
+  min-height: auto;
+}
+
 .p-article01__excerpt {
   font-size: 14px;
   line-height: 2;
   margin-bottom: 17px;
+}
+.item-insight__excerpt {
+  margin-bottom: 0;
 }
 
 .p-article01__meta {
@@ -2520,6 +2530,9 @@ ul {
   .p-article01__title {
     font-size: 16px;
     padding: 0 20px;
+  }
+  .item-insight__title {
+    padding: 0;
   }
 }
 
@@ -4825,7 +4838,7 @@ a.p-cat:hover {
 }
 .p-global-nav > li:nth-of-type(6) > a::after {
   /* content:"INSIGHTS"; コラムが増えたら、こっちを表示*/
-  content: "CAREERS";
+  content: "INSIGHTS";
 }
 .p-global-nav > li:nth-of-type(7) > a::after {
   content: "CAREERS";

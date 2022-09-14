@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<?php get_template_part( 'template-parts/breadcrumb-column' ); ?>
+<?php get_template_part( 'template-parts/breadcrumb' ); ?>
 
 <div class="l-contents l-contents--grid<?php if ( 'type2' === $dp_options['sidebar'] ) { echo '-rev'; } ?>">
 
