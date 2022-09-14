@@ -8,7 +8,7 @@ $args = array(
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part( 'template-parts/breadcrumb-insights' ); ?>
+<?php get_template_part( 'template-parts/breadcrumb' ); ?>
 
 <div class="l-contents l-contents--grid<?php if ( 'type2' === $dp_options['sidebar'] ) { echo '-rev'; } ?>">
   <div class="l-contents__inner l-inner">
@@ -22,8 +22,9 @@ $args = array(
               the_post();
               $categories = get_the_category();
           ?>
-          <article class="p-blog__list-item p-article01" data-aos="custom-fade">
+          <article class="p-blog__list-item p-article01 item-insight" data-aos="custom-fade">
             <a class="p-hover-effect--<?php echo esc_attr( $dp_options['hover_type'] ); ?>" href="<?php the_permalink(); ?>">
+              <?php /*
               <div class="p-article01__img">
                 <?php
                 if ( has_post_thumbnail() ) {
@@ -33,9 +34,10 @@ $args = array(
                 }
                 ?>
               </div>
-              <h3 class="p-article01__title"><?php echo wp_trim_words( get_the_title(), 31, '...' ); ?></h3>
+              */ ?>
+              <h3 class="p-article01__title item-insight__title"><?php echo wp_trim_words( get_the_title(), 31, '...' ); ?></h3>
 
-            <p class="p-article01__excerpt"><?php echo is_mobile() ? wp_trim_words( get_the_excerpt(), 55, '...' ) : wp_trim_words( get_the_excerpt(), 74, '...' ); ?></p>
+            <p class="p-article01__excerpt item-insight__excerpt"><?php echo is_mobile() ? wp_trim_words( get_the_excerpt(), 55, '...' ) : wp_trim_words( get_the_excerpt(), 74, '...' ); ?></p>
             <?php if ( $dp_options['show_category'] || $dp_options['show_date'] ) : ?>
             <p class="p-article01__meta">
               <?php if ( $dp_options['show_category'] ) : ?>
