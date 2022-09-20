@@ -2467,9 +2467,6 @@ ul {
   border: 1px solid #ddd;
   padding: 22px 22px 35px;
 }
-.item-insight {
-  padding: 22px;
-}
 
 .p-article01__img {
   overflow: hidden;
@@ -2483,17 +2480,11 @@ ul {
   min-height: 50px;
   transition: color 0.2s ease;
 }
-.item-insight__title {
-  min-height: auto;
-}
 
 .p-article01__excerpt {
   font-size: 14px;
   line-height: 2;
   margin-bottom: 17px;
-}
-.item-insight__excerpt {
-  margin-bottom: 0;
 }
 
 .p-article01__meta {
@@ -11970,5 +11961,64 @@ cursor: pointer;
 @media screen and (max-width: 425px) {
   .fm-tmu-contact .fm-tmu-border div:before {
     width: 50%;
+  }
+}
+
+
+/* 20220915 コラム一覧の表示変更（執筆者追加） */
+.list-insight {
+  display: block;
+}
+.item-insight {
+  padding: 0;
+  margin-left: 0 !important;
+  width: 100%;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+}
+.item-insight__link {
+  display: flex;
+  align-items: center;
+  padding: 0 25px !important;
+  height: 60px;
+  line-height: 60px;
+  border: none !important;
+}
+.item-insight__title {
+  min-height: auto;
+  flex-basis: calc(80% - 2em);
+}
+.item-insight__excerpt {
+  margin-bottom: 0;
+  flex-basis: 20%;
+  line-height: 1.4;
+}
+.item-insight__excerpt span {
+  margin-right: 1em;
+}
+@media screen and (max-width: 767px) {
+  .l-insight {
+    padding-top: 0;
+  }
+  .item-insight {
+    margin: 0 !important;
+  }
+  .item-insight__link {
+    display: block;
+    padding: 15px 20px !important;
+    margin: 0 !important;
+    height: auto;
+    line-height: 1.4;
+  }
+  .item-insight:not(:first-of-type) {
+    border-top: none !important;
+  }
+  .item-insight__title {
+    margin: 0 !important;
+    min-height: auto;
+    flex-basis: calc(80% - 2em);
+  }
+  .item-insight__excerpt {
+    margin-top: 2px;
   }
 }
